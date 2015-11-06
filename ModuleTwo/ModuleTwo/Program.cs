@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModuleTwo
 {
@@ -12,18 +8,37 @@ namespace ModuleTwo
         {
             for (int i = 0; i < 8; i++)
             {
-                for (int j = 0; j < 8; j++)
+                if (i % 2 == 0)
                 {
-                    if (j % 2 == 0)
+                    for (int j = 0; j < 8; j++)
                     {
-                        Console.Write("X");
+                        if (j % 2 == 0)
+                        {
+                            Console.Write("X");
+                        }
+                        else
+                        {
+                            Console.Write("O");
+                        }
                     }
-                    else
-                    {
-                        Console.Write("O");
-                    }
+                    Console.Write("\n");
                 }
-                Console.Write("\n");
+                else
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        if (j % 2 == 0)
+                        {
+                            Console.Write("O");
+                        }
+                        else
+                        {
+                            Console.Write("X");
+                        }
+                    }
+                    Console.Write("\n");
+                }
+
             }
             Console.ReadKey();
         }
